@@ -22,8 +22,16 @@ def is_unique(symbol, side):
     """
     return True
 
-def get_price(symbol, timeframe, period):
+def get_price(symbol):
    
+    price = 0
+    """
+    use yfinance to get the most current price (last close price) of the inputed ticker (symbol)
+    and return the price
+    """
+    return price
+
+def get_data(symbol, timeframe, period):
     data = 0
     """
     use yfinance to get the candle data of the inputed ticker (symbol)
