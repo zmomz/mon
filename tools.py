@@ -40,11 +40,13 @@ def get_data(symbol, timeframe, period):
     return data
 
 def stoploss(data, side, signal_price):
-    calculate_stoploss(df=data, side=side, signal_price=signal_price)
+    sl= calculate_stoploss(df=data, side=side, signal_price=signal_price)
+    return sl
 
 def find_targets(data, side, signal_price):
-    calculate_targets(df=data, side=side, signal_price=signal_price)
-
+    targets =calculate_targets(df=data, side=side, signal_price=signal_price)
+    return targets
+    
 def create_message(side, symbol, signal_price, targets, leverage, stoploss):
     pass
     """
