@@ -37,7 +37,7 @@ def webhook():
 
         stoploss = tools.stoploss(data = data, side=side, signal_price=signal_price)
         
-        targets = tools.find_targets(data = data, side=side, signal_price=signal_price, k=0.015)
+        targets = tools.find_targets(data = data, side=side, signal_price=signal_price)
 
         message = tools.create_message(side=side, symbol=symbol, signal_price=signal_price, targets=targets, leverage=leverage, stoploss=stoploss)
 
