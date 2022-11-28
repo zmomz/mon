@@ -2,7 +2,7 @@ import telegram
 from config import telegram_token, chat_id
 import yfinance as yf
 from datetime import datetime
-
+from advanced_tools import calculate_targets, calculate_stoploss
 # telegram_bot = telegram.Bot(telegram_token)
 messages = []
 
@@ -20,6 +20,7 @@ def is_unique(symbol, side):
                 {symbol:"GOOG", time: "2022-11-29 23:01:10.312345", side: "short"},
                 ....]
     """
+    return True
 
 def get_price(symbol, timeframe, period):
    
@@ -31,10 +32,10 @@ def get_price(symbol, timeframe, period):
     return data
 
 def stoploss(data, side, signal_price):
-    pass
+    calculate_stoploss(df=data, side=side, signal_price=signal_price)
 
-def find_targets(data, side, signal_price, k):
-    pass
+def find_targets(data, side, signal_price):
+    calculate_targets(df=data, side=side, signal_price=signal_price)
 
 def create_message(side, symbol, signal_price, targets, leverage, stoploss):
     pass
