@@ -3,7 +3,7 @@
 
 {
     "passphrase": "makeApassphrase",
-    "symbol": "{{ticker}}",
+    "symbol": "AAPL",
     "tf":"15m",
     "side": "long"
 }
@@ -12,7 +12,7 @@
 
 {
     "passphrase": "makeApassphrase",
-    "symbol": "{{ticker}}",
+    "symbol": "AAPL",
     "tf":"15m",
     "side": "short"
 }
